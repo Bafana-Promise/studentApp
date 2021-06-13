@@ -1,0 +1,32 @@
+.innerContainer{
+    width: 100%;
+}
+
+.input{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    .mat-form-field{
+        width: 83%;
+    }
+    .mat-button{
+        width: 16%;
+        height: 61px;
+        margin-top: 3.3px;
+    }
+}
+.alignRight{
+    text-align: center;
+}
+
+.outercontainer{
+    margin-top: 34px;
+}
+
+table {
+    width: 100%;
+  }
+  
+.header{
+    text-align: center;
+}

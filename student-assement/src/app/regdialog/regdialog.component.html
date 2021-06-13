@@ -1,0 +1,12 @@
+<div class="card">
+    <label id="example-radio-group-label">Register New Class</label>
+    <mat-radio-group aria-labelledby="example-radio-group-label" class="example-radio-group"
+        >
+        <mat-radio-button class="example-radio-button" ngDefaultControl *ngFor="let subject of subjects" [(ngModel)]="selectedSubjectCode" name="subject" [value]="subject.code" [checked]="selectedSubjectCode == subject.code" (change)="getValue(subject)">
+            {{subject.name}}
+
+        </mat-radio-button>
+    </mat-radio-group>
+
+    <div><button mat-button mat-raised-button color="primary" mat-dialog-close = "true">Register New Class</button></div>
+</div>

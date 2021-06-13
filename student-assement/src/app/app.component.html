@@ -1,0 +1,69 @@
+<div fxLayout="row" fxLayoutAlign="space-between center" class="navbar">
+  <div class="menuContainer">
+    <mat-icon (click)="sidebar.toggle()">menu</mat-icon>
+  </div>
+</div>
+
+<!-- Main Section -->
+<div fxLayout="fxFill" fxLayoutAlign="start stretch" class="mainContainer">
+  <mat-drawer-container class="example-container">
+    <!-- <mat-drawer class="naviga" #sidebar mode="side" opened> -->
+
+    <!-- </mat-drawer> -->
+    <mat-drawer class="naviga" #sidebar mode="side">
+      
+      <div class="header">
+        <h2 routerLink='/dashboard' routerLinkActive="active"><span class="material-icons">
+          desktop_windows
+          </span> Dashboard</h2>
+      </div>
+      <mat-divider class="sideNavColor"></mat-divider>
+      <div class="header">
+        <h2 routerLink='/profile' routerLinkActive="active"><span class="material-icons">
+          account_circle
+          </span>Profile</h2>
+      </div>
+      <mat-divider class="sideNavColor"></mat-divider>
+      <div class="header">
+        <h2 routerLink='/marks' routerLinkActive="active"><span class="material-icons">
+          star
+          </span>Marks</h2>
+      </div>
+      <mat-divider class="sideNavColor"></mat-divider>
+      <div class="header">
+        <h2 routerLink='/registerclasses' routerLinkActive="active"><span class="material-icons">
+          school
+          </span>Registered Classes</h2>
+      </div>
+      <mat-divider class="sideNavColor"></mat-divider>
+      <div class="header">
+        <h2 routerLink='/deregisterclasses' routerLinkActive="active"><span class="material-icons">
+          highlight_off
+          </span>Deregistered Classes</h2>
+      </div>
+      <mat-divider class="sideNavColor"></mat-divider>
+      <div class="header">
+        <h2 routerLink='/logout' (click)="logout()"><span class="material-icons">
+          power_settings_new
+          </span>Logout</h2>
+      </div>
+      <mat-divider class="sideNavColor"></mat-divider>
+    </mat-drawer>
+
+
+    <mat-drawer-content class="mainC">
+
+      <router-outlet></router-outlet>
+
+    </mat-drawer-content>
+  </mat-drawer-container>
+
+  <!-- <sidenav-drawer-overview-example>Loading</sidenav-drawer-overview-example> -->
+</div>
+
+<!-- Footer -->
+<!-- <div fxLayout="row" fxLayoutAlign="center center" class="navbar">
+  <div>
+    <p>&copy; Promise | 2021</p>
+  </div>
+</div> -->

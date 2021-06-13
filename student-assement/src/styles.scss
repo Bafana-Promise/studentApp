@@ -1,0 +1,110 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+/* You can add global styles to this file, and also import other style files */
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.sideBarIcon {
+    width: 35%;
+    margin: 0 auto;
+    img{
+      width: 50px;  
+    }
+}
+.dash h3 {
+    background: #ccc;
+    padding: 2px;
+    font-family: system-ui;
+    font-size: 21px;
+}
+
+.mainbody{
+    display: flex;
+}
+.sidebar{
+    background-color: rgb(174, 93, 221);
+    padding: 10px;
+    width: 20%;
+}
+.menuList {
+    ul{
+        margin-block-start: 0;
+        padding-inline-start: 0;
+    }
+    li{
+        list-style: none;
+        border-bottom: 1px solid antiquewhite;
+        padding: 5px 0px;
+        color: antiquewhite;
+        cursor: pointer;
+    }
+}
+.innerContainer{
+    width: 80%;
+    padding: 24px;
+}
+
+.alignRight{
+    text-align: end;
+}
+
+.card{
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    position: relative;
+    h1{
+        font-size: 27px;
+        color: white;
+        font-family: sans-serif;
+        margin-left: 7px;
+    }
+}
+
+.bgGreen{
+    width: 23%;
+    background: rgb(17, 251, 56);
+    // background: #11fb38;
+    margin-bottom: 19px;
+}
+
+.absolute{
+    position: absolute;
+    bottom: 29px;
+    right: 23px;
+    font-size: 47px;
+    color: white;
+}
+.relative{
+    font-size: 26px;
+    color: white;
+    font-family: sans-serif;
+    position: absolute;
+    top: 60px;
+    left: 10px;
+
+}
+.bgBlue{
+    background-color: #248eb1;
+    width: 23%;
+}
+.bgOrange{
+    background-color: orangered;
+    width: 23%;
+}
+.bgRed{
+    background-color: red;  
+    width: 23%;
+}
+.input{
+    margin-bottom: 16px;
+    input{
+        width: 99%;
+        padding: 5px;
+    }
+}

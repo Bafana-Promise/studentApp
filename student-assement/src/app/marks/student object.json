@@ -1,0 +1,24 @@
+[{
+    "firstName": "Promise",
+    "lastName": "Kopo",
+    "phone": "0786413440",
+    "idNumber": "878787878",
+    "gender": "Male",
+    "userDetails": {
+        "email": "asdas@sdsd",
+        "password": "asdfeas3r3r"
+    },
+    "address": {
+        "streetAddress": "asdfsdfdf",
+        "city": "Boshbeg"
+    },
+    "classes": {
+        "registered": [{
+            "id": "aashdgas67ydt6",
+            "name": "CSS",
+            "code": "CSS",
+            "marks": []
+        }],
+        "deregistered": []
+    }
+}]

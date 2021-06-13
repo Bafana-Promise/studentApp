@@ -1,0 +1,49 @@
+<div fxLayout="row" fxLayoutAlign="center center" fxFill>
+
+    <div fxLayout="column" fxLayoutAlign="start stretch" fxFlex="25" class="width">
+        <div fxLayout="row" fxLayoutAlign="center center" class="loginClass">
+            <h1>Login</h1>
+        </div>
+        <div fxLayout="row" fxLayoutAlign="center center">
+            <span class="material-icons">
+                task
+            </span>
+        </div>
+        <br>
+        <form #contactForm="ngForm">
+            <div fxLayout="column" fxLayoutAlign="start stretch">
+                <p class="textCenter">Email</p>
+                <mat-form-field appearance="outline">
+                    <mat-label>Email</mat-label>
+                    <input matInput placeholder="Placeholder" type="email" id="email" name="email" #email="ngModel"
+                        ngModel required pattern="^[a-z0-9]+@[a-z0-9]+\.[a-z]{2,4}$">
+                    <mat-error *ngIf="!email?.valid && (email?.dirty || email?.touched)" class="error">
+                        <mat-error *ngIf="email.errors.required">Email is required</mat-error>
+                        <mat-error *ngIf="email.errors.pattern">Invalid Email Address</mat-error>
+                    </mat-error>
+                </mat-form-field>
+            </div>
+            <div fxLayout="column" fxLayoutAlign="start stretch">
+                <p class="textCenter">Password</p>
+                <mat-form-field appearance="outline">
+                    <mat-label>Password</mat-label>
+                    <input matInput placeholder="Placeholder" type="password" name="password" #password="ngModel"
+                        ngModel required pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,}$">
+                    <mat-error *ngIf="!password?.valid && (password?.dirty || password?.touched)" class="error">
+                        <mat-error *ngIf="password.errors.required">Password is required</mat-error>
+                        <mat-error *ngIf="password.errors.pattern">Six characters, at least one letter and one number
+                        </mat-error>
+                    </mat-error>
+                </mat-form-field>
+            </div>
+
+            <div fxLayout="column" fxLayoutAlign="start stretch">
+                <p>Not a User? Register <span routerLink="/registration" class="linkContainer"> Here</span> </p>
+                <button mat-button mat-raised-button color="primary" (click)="submitLogin(contactForm)" type="submit"
+                [disabled]="!contactForm.valid">LOG IN</button>
+            </div>
+        </form>
+
+    </div>
+
+</div>

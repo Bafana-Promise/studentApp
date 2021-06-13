@@ -1,0 +1,27 @@
+<div fxLayout="row" fxLayoutAlign="center center" fxFill class="mainContainer">
+
+    <div fxLayout="column" fxLayoutAlign="start stretch" fxFlex="100" class="width">
+        <div fxLayout="row" fxLayoutAlign="center center" class="loginClass">
+            <h1> {{data.name}} </h1>
+        </div>
+        <div fxLayout="column" fxLayoutAlign="start stretch" class="margin-top">
+            
+                <div fxLayout="column" fxLayoutAlign="start stretch" class="button">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Enter Marks</mat-label>
+                        <input matInput placeholder="Mark" type="text" id="marks" name="marks"
+                            #marks="ngModel" [(ngModel)]="mark" required 
+                            maxlength="3">
+                    </mat-form-field>
+                </div>
+        </div>
+        <div fxLayout="column" fxLayoutAlign="start stretch" class="button">
+            
+            <div fxLayout="column" fxLayoutAlign="start stretch" class="button">
+                <button mat-dialog-close mat-raised-button color="primary" class="buttonColor"
+                    (click)="openDialog()" >Add Mark</button>
+            </div>
+        </div>
+    </div>
+
+</div>

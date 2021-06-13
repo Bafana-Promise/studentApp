@@ -1,0 +1,39 @@
+.fullwidth{
+    width: 100%;
+    h1{
+        font-family: sans-serif;
+        text-align: center;
+    }
+}
+
+.material-icons{
+    margin-top: 20px;
+    width:100px;
+    height:100px;
+    border-radius:50px;
+    font-size: 70px;
+    color:#fff;
+    line-height:100px;
+    text-align:center;
+    background: #ff616f;
+}
+
+.fullwidth1{
+    width: 100%;
+    div{
+        margin-bottom: 3px;
+    }
+}
+
+.nameField{
+    width: 49%;
+}
+.button{
+    width: 280px;
+}
+
+.linkContainer{
+    text-align: start;
+    color: lightseagreen;
+    cursor: pointer;
+}

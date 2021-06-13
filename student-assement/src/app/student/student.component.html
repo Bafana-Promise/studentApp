@@ -1,0 +1,145 @@
+<form fxLayout="row" fxLayoutAlign="center center" #contactForm="ngForm">
+    <div fxLayout="column" fxLayoutAlign="center center" fxFlex="50" class="mainContainer">
+        <div fxLayout="column" fxLayoutAlign="start stretch" fxFlex="100" class="fullwidth">
+            <h1>Students</h1>
+            <div fxLayout="column" fxLayoutAlign="start stretch">
+                <div fxLayout="row" fxLayoutAlign="space-between center">
+                    <div fxLayout="column" fxLayoutAlign="start stretch" class="nameField">
+                        <mat-form-field appearance="outline">
+                            <mat-label>First Name</mat-label>
+                            <input matInput placeholder="Placeholder" type="text" name="firstname" #firstname="ngModel"
+                                ngModel required pattern="^[a-zA-Z]+$">
+                            <mat-error *ngIf="!firstname?.valid && (firstname?.dirty || firstname?.touched)"
+                                class="error">
+                                <mat-error *ngIf="firstname.errors.required">First Name is required</mat-error>
+                                <mat-error *ngIf="firstname.errors.pattern">Only letters are allowed</mat-error>
+                            </mat-error>
+                        </mat-form-field>
+                    </div>
+                    <div fxLayout="column" fxLayoutAlign="start stretch" class="nameField">
+                        <mat-form-field appearance="outline">
+                            <mat-label>Last Name</mat-label>
+                            <input matInput placeholder="Placeholder" type="text" name="lastname" #lastname="ngModel"
+                                ngModel required pattern="^[a-zA-Z]+$">
+                            <mat-error *ngIf="!lastname?.valid && (lastname?.dirty || lastname?.touched)" class="error">
+                                <mat-error *ngIf="lastname.errors.required">last Name is required</mat-error>
+                                <mat-error *ngIf="lastname.errors.pattern">Only letters are allowed</mat-error>
+                            </mat-error>
+                        </mat-form-field>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div fxLayout="column" fxLayoutAlign="start stretch" fxFlex="100" class="fullwidth">
+            <mat-form-field appearance="outline">
+                <mat-label>Phone Number</mat-label>
+                <input matInput placeholder="Placeholder" type="text" id="cellNumber" name="cellNumber"
+                    #cellNumber="ngModel" ngModel required pattern="^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\./0-9]*$" maxlength="10">
+                <mat-error *ngIf="!cellNumber?.valid && (cellNumber?.dirty || cellNumber?.touched)" class="error">
+                    <mat-error *ngIf="cellNumber.errors.required">Phone Numbers are required</mat-error>
+                    <mat-error *ngIf="cellNumber.errors.maxlength">10 Digits are required
+                        {{cellNumber.errors.maxlength?.requiredLength}}</mat-error>
+                    <mat-error *ngIf="cellNumber.errors.pattern">Only Numbers are allowed</mat-error>
+                </mat-error>
+            </mat-form-field>
+        </div>
+        <div fxLayout="column" fxLayoutAlign="start stretch" fxFlex="100" class="fullwidth">
+
+            <div fxLayout="column" fxLayoutAlign="start stretch">
+                <div fxLayout="row" fxLayoutAlign="space-between center">
+                    <div fxLayout="column" fxLayoutAlign="start stretch" class="nameField">
+                        <mat-form-field appearance="outline">
+                            <mat-label>ID Number</mat-label>
+                            <input matInput placeholder="Placeholder" type="text" name="idNumber" #idNumber="ngModel" ngModel
+                                required pattern="^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\./0-9]*$">
+                            <mat-error *ngIf="!idNumber?.valid && (idNumber?.dirty || idNumber?.touched)" class="error">
+                                <mat-error *ngIf="idNumber.errors.required">ID is required</mat-error>
+                                <mat-error *ngIf="idNumber.errors.pattern">ID number is allowed</mat-error>
+                            </mat-error>
+                        </mat-form-field>
+                    </div>
+                    <div fxLayout="column" fxLayoutAlign="start stretch" class="nameField">
+                        <mat-form-field appearance="outline">
+                            <mat-label>Gender</mat-label>
+                            <input matInput placeholder="Placeholder" type="text" name="gender" #gender="ngModel"
+                                ngModel required pattern="^[a-zA-Z]+$">
+                            <mat-error *ngIf="!gender?.valid && (gender?.dirty || gender?.touched)" class="error">
+                                <mat-error *ngIf="gender.errors.required">Gender is required</mat-error>
+                                <mat-error *ngIf="gender.errors.pattern">Only letters are allowed</mat-error>
+                            </mat-error>
+                        </mat-form-field>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div fxLayout="column" fxLayoutAlign="start stretch" fxFlex="100" class="fullwidth">
+            <div fxLayout="column" fxLayoutAlign="start stretch">
+                <div fxLayout="row" fxLayoutAlign="space-between center">
+                    <div fxLayout="column" fxLayoutAlign="start stretch" class="nameField">
+                        <mat-form-field appearance="outline">
+                            <mat-label>Email</mat-label>
+                            <input matInput placeholder="Placeholder" type="email" id="email" name="email" #email="ngModel" ngModel
+                                required pattern="^[a-z0-9]+@[a-z0-9]+\.[a-z]{2,4}$">
+                            <mat-error *ngIf="!email?.valid && (email?.dirty || email?.touched)" class="error">
+                                <mat-error *ngIf="email.errors.required">Email is required</mat-error>
+                                <mat-error *ngIf="email.errors.pattern">Invalid Email Address</mat-error>
+                            </mat-error>
+                        </mat-form-field>
+                    </div>
+                    <div fxLayout="column" fxLayoutAlign="start stretch" class="nameField">
+                        <mat-form-field appearance="outline">
+                            <mat-label>Password</mat-label>
+                            <input matInput placeholder="Placeholder" type="password" name="password" #password="ngModel"
+                                ngModel required pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,}$">
+                            <mat-error *ngIf="!password?.valid && (password?.dirty || password?.touched)" class="error">
+                                <mat-error *ngIf="password.errors.required">Password is required</mat-error>
+                                <mat-error *ngIf="password.errors.pattern">Six characters, at least one letter and one number</mat-error>
+                            </mat-error>
+                        </mat-form-field>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div fxLayout="column" fxLayoutAlign="start stretch" fxFlex="100" class="fullwidth">
+            <div fxLayout="column" fxLayoutAlign="start stretch">
+                <div fxLayout="row" fxLayoutAlign="space-between center">
+                    <div fxLayout="column" fxLayoutAlign="start stretch" class="nameField">
+                        <mat-form-field appearance="outline">
+                            <mat-label>City</mat-label>
+                            <input matInput placeholder="Placeholder" type="text" name="city" #city="ngModel" ngModel required>
+                            <mat-error *ngIf="!city?.valid && (city?.dirty || city?.touched)" class="error">
+                                <mat-error *ngIf="city.errors.required">last Name is required</mat-error>
+                                <!-- <mat-error *ngIf="city.errors.pattern">Only letters are allowed</mat-error> -->
+                            </mat-error>
+                        </mat-form-field>
+                    </div>
+                    <div fxLayout="column" fxLayoutAlign="start stretch" class="nameField">
+                        <mat-form-field appearance="outline">
+                            <mat-label>Street Address</mat-label>
+                            <input matInput placeholder="Placeholder" type="text" name="street" #street="ngModel" ngModel
+                                required>
+                            <mat-error *ngIf="!street?.valid && (street?.dirty || street?.touched)" class="error">
+                                <mat-error *ngIf="street.errors.required">Street Name is required</mat-error>
+                                <!-- <mat-error *ngIf="street.errors.pattern">Only letters are allowed</mat-error> -->
+                            </mat-error>
+                        </mat-form-field>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div fxLayout="row" fxLayoutAlign="space-between stretch" fxFlex="100" class="fullwidth">
+            <section>
+                <div class="example-button-row">
+                    <button mat-raised-button color="primary" (click)="onSubmit(contactForm)" type="submit"
+                        [disabled]="!contactForm.valid">Update Profile</button>
+                </div>
+            </section>
+    
+        </div>
+        <!-- <form #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)">
+
+      </form> -->
+    </div>
+
+</form>
